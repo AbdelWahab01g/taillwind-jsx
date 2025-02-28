@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, EyeOff } from 'lucide-react'; // Import Lucide icons for password visibility
+import { Eye, EyeOff, Flame } from 'lucide-react'; // Import Lucide icons
 import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
@@ -16,12 +16,18 @@ const SignUpPage = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="bg-[#f5f4f4] p-8 rounded-lg shadow-lg w-full max-w-md"> {/* Added shadow-lg */}
+      <div className="bg-[#f5f4f4] p-8 rounded-lg shadow-lg w-full max-w-md">
+        
+        {/* Flame Icon at the Top */}
+        <div className="flex justify-center mb-4">
+          <Flame className="h-12 w-12 text-orange-600" />
+        </div>
+
         <h1 className="text-2xl font-bold text-center mb-6">Sign Up</h1>
 
         {/* Full Name Input */}
         <div className="mb-4">
-          <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 text-left"> {/* Label aligned left */}
+          <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 text-left">
             Full Name
           </label>
           <input
@@ -34,7 +40,7 @@ const SignUpPage = () => {
 
         {/* Birth Date Input */}
         <div className="mb-4">
-          <label htmlFor="birthDate" className="block text-sm font-medium text-gray-700 text-left"> {/* Label aligned left */}
+          <label htmlFor="birthDate" className="block text-sm font-medium text-gray-700 text-left">
             Birth Date
           </label>
           <input
@@ -46,7 +52,7 @@ const SignUpPage = () => {
 
         {/* Phone Number Input */}
         <div className="mb-4">
-          <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 text-left"> {/* Label aligned left */}
+          <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 text-left">
             Phone Number
           </label>
           <input
@@ -59,7 +65,7 @@ const SignUpPage = () => {
 
         {/* Email Input */}
         <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 text-left"> {/* Label aligned left */}
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 text-left">
             Email
           </label>
           <input
@@ -72,7 +78,7 @@ const SignUpPage = () => {
 
         {/* Password Input */}
         <div className="mb-4">
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700 text-left"> {/* Label aligned left */}
+          <label htmlFor="password" className="block text-sm font-medium text-gray-700 text-left">
             Password
           </label>
           <div className="relative">
@@ -87,18 +93,14 @@ const SignUpPage = () => {
               onClick={togglePasswordVisibility}
               className="absolute inset-y-0 right-0 pr-3 flex items-center"
             >
-              {showPassword ? (
-                <EyeOff className="h-5 w-5 text-gray-500" /> // Lucide EyeOff icon
-              ) : (
-                <Eye className="h-5 w-5 text-gray-500" /> // Lucide Eye icon
-              )}
+              {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
             </button>
           </div>
         </div>
 
         {/* Confirm Password Input */}
         <div className="mb-6">
-          <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 text-left"> {/* Label aligned left */}
+          <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 text-left">
             Confirm Password
           </label>
           <div className="relative">
@@ -113,11 +115,7 @@ const SignUpPage = () => {
               onClick={toggleConfirmPasswordVisibility}
               className="absolute inset-y-0 right-0 pr-3 flex items-center"
             >
-              {showConfirmPassword ? (
-                <EyeOff className="h-5 w-5 text-gray-500" /> // Lucide EyeOff icon
-              ) : (
-                <Eye className="h-5 w-5 text-gray-500" /> // Lucide Eye icon
-              )}
+              {showConfirmPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
             </button>
           </div>
         </div>
@@ -125,7 +123,7 @@ const SignUpPage = () => {
         {/* Sign Up Button */}
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="w-full bg-[#ff3939] text-white py-2 px-4 rounded-md hover:bg-[#7F0000] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           Sign Up
         </button>
@@ -134,7 +132,7 @@ const SignUpPage = () => {
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
             Already have an account?{' '}
-            <Link to="/" className="text-blue-600 hover:text-blue-500">
+            <Link to="/" className="text-[#ff3939] hover:text-green-500">
                 Log In
             </Link>
           </p>

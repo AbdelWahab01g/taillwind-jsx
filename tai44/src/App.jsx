@@ -17,7 +17,7 @@ function App() {
           <Route path="/homeadmin" element={<Homepageadmin />} />
           <Route path="/insertrole" element={<InsertRolePage/>} />
           <Route path="/inscription" element={<InscriptionPage />} />
-          <Route path="*" element={<h1>ERORR 404  / wali</h1>} /> 
+          <Route path="*" element={<h1>ERORR 404 / page d`ont existe</h1>} /> 
         </Routes>
       </Router>
     </>

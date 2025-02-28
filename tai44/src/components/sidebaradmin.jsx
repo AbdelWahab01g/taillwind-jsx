@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-
 
 const Sidebaradmin = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,14 +10,14 @@ const Sidebaradmin = () => {
       {/* Bouton pour ouvrir la sidebar */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed top-4 right-4 bg-[#00b6ce] text-white p-2 rounded-lg shadow-lg z-50"
+        className="fixed top-4 right-4 bg-[#1375e8] hover:bg-[#0f335d] text-white p-3 rounded-full shadow-lg z-50 w-12 h-12 flex items-center justify-center"
       >
-        <Menu size={28} />
+        <Menu size={30} />
       </button>
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-screen bg-[#002341] text-white w-64 transform ${
+        className={`fixed top-0 right-0 h-screen bg-[#002e64] text-white w-64 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out shadow-lg flex flex-col`}
       >
@@ -27,11 +26,11 @@ const Sidebaradmin = () => {
           onClick={() => setIsOpen(false)}
           className="absolute top-4 left-4 text-white"
         >
-          <X size={28} />
+          <X size={30} />
         </button>
 
         {/* User Info */}
-        <div className="p-6 border-b border-gray-700">
+        <div className="p-6 border-b border-[#e7e7e7] mt-10">
           <h2 className="text-lg font-semibold">John Doe</h2>
           <p className="text-sm text-gray-400">Admin</p>
         </div>
@@ -40,29 +39,29 @@ const Sidebaradmin = () => {
         <div className="flex-1 p-4">
           <ul className="space-y-2">
             <li>
-            <Link to="/inscription">
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-300 hover:bg-gray-700 rounded-lg transition duration-200"
-              >
-                <span>Inscription List</span>
-              </a>
-            </Link>
+              <Link to="/inscription">
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-white hover:bg-[#e7e7e7] hover:text-black rounded-lg transition duration-200"
+                >
+                  <span>Inscription List</span>
+                </a>
+              </Link>
             </li>
             <li>
-            <Link to="/insertrole">
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-300 hover:bg-gray-700 rounded-lg transition duration-200"
-              >
-                <span>Insert Role</span>
-              </a>
-            </Link>
+              <Link to="/insertrole">
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-white hover:bg-[#e7e7e7] hover:text-black rounded-lg transition duration-200"
+                >
+                  <span>Insert Role</span>
+                </a>
+              </Link>
             </li>
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-300 hover:bg-gray-700 rounded-lg transition duration-200"
+                className="flex items-center p-2 text-white hover:bg-[#e7e7e7] hover:text-black rounded-lg transition duration-200"
               >
                 <span>Profile Info</span>
               </a>
@@ -77,7 +76,7 @@ const Sidebaradmin = () => {
             type="button"
           >
             <div
-              className="bg-[#00b6ce] rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
+              className="bg-[#1375e8] rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

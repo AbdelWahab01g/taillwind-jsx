@@ -23,7 +23,7 @@ const Fireobject = () => {
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   @keyframes scaleUpDown {
@@ -211,6 +211,7 @@ const StyledWrapper = styled.div`
     animation: glow 2s ease-out 0;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
-  }`;
+  }
+`;
 
 export default Fireobject;
